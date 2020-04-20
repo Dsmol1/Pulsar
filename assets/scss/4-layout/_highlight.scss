@@ -1,0 +1,187 @@
+.highlight {
+  position: relative;
+  background: #F2F2F2;
+  @include responsive(lg) {}
+
+  &__mobile-bg-img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__bg-img {
+    width: 50%;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 6.5vw;
+    width: 100%;
+    @include responsive(md) {
+      top: 17%;
+    }
+    @include responsive(lg) {
+      left: -12.2vw;
+      top: 30%;
+      width: 60%;
+    }
+  }
+
+  &__slider {
+    &__slide {
+      position: relative;
+      margin: 5px;
+      @include responsive(md) {
+        margin: 9px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .highlight__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1B7AD2;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        opacity: 0.8;
+
+        &__text {
+          color: #fff;
+          font-size: 0.8rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+          @include responsive(md) {
+            font-size: 30px;
+          }
+        }
+      }
+
+      &:hover .highlight__overlay {
+        width: 100% !important;
+      }
+    }
+  }
+
+  &__slider-nav {
+    text-align: center;
+    margin-top: 38px;
+  }
+
+  .slick-center {
+    img {}
+
+    .highlight__overlay {
+      width: 100%;
+      @include responsive(lg) {
+        width: 0;
+      }
+    }
+  }
+
+  &__info {
+    display: none;
+    padding: 2rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    @include responsive(lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include responsive(xl) {
+      padding: 4rem 1.5rem;
+    }
+
+    h5 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: 65px;
+      font-weight: 900;
+      line-height: 0.85;
+      @include responsive(xl) {
+        font-size: 80px;
+      }
+
+      span {
+        color: $clr-red;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+      @include responsive(xl) {
+        margin-top: 2.5rem;
+      }
+
+      li {
+        display: flex;
+        min-height: 42px;
+        margin-bottom: 0.25rem;
+        @include responsive(xl) {
+          min-height: 72px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: url("../images/camera-icon.png");
+          margin-right: 2rem;
+          margin-top: 0.6rem;
+        }
+
+        a {
+          font-size: 18px;
+          font-weight: 700;
+          color: #000;
+          @include responsive(xl) {
+            font-size: 27px;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 13px;
+          color: #AAAAAA;
+        }
+      }
+    }
+  }
+}
+// slider jumping fix
+
+.highlight__slider .slick-slide,
+.highlight__slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+  transform: scale(0.95, 0.95);
+  transition: transform 0.3s;
+}
+
+.highlight__slider .slick-center,
+.highlight__slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+  transform: scale(1.05, 1.05);
+}

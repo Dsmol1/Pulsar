@@ -1,0 +1,115 @@
+.news {
+  margin-top: 1.5rem;
+  @include responsive(lg) {
+    margin-top: 76px;
+  }
+
+  .btn {
+    margin: 0 auto;
+    @include responsive(md) {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    padding: 0.5rem;
+
+    > div {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 14px 16px 24px 19px;
+      display: flex;
+      flex-direction: column;
+
+      &.padding-fix {
+        padding: 14px 16px 18px 19px;
+      }
+
+      img {
+        margin-left: auto;
+      }
+
+      .testimonial-wrapper {
+        margin-top: auto;
+      }
+
+      time.primary {
+        color: #fff;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      time.secondary {
+        margin-bottom: -2px;
+        color: #fff;
+        display: block;
+      }
+
+      h3 {
+        width: 100%;
+        font-weight: 700;
+        padding-left: 10px;
+        font-size: 25px;
+        color: #fff;
+
+        &:hover {
+          color: darken(#fff, 15%);
+        }
+        @include responsive(md) {
+          font-size: 38px;
+          padding-left: 12px;
+          width: 85%;
+        }
+
+        span.title-wrapper {
+          box-shadow: 0 0 0 9px $clr-red, 3px 0 0 5px $clr-red;
+
+          span.title {
+            position: relative;
+            background: $clr-red;
+          }
+        }
+      }
+
+      h4 {
+        width: 100%;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 700;
+
+        &:hover {
+          color: darken(#fff, 15%);
+        }
+        @include responsive(md) {
+          font-size: 30px;
+          width: 85%;
+        }
+      }
+    }
+
+    .a {
+      background-image: url("../images/news-img.png");
+      height: 272.5px;
+      @include responsive(md) {
+        height: 560px;
+      }
+    }
+
+    .b,
+    .c {
+      background-image: url("../images/news-img2.png");
+      background-position: center;
+      height: 272.5px;
+      @include responsive(md) {
+        background-position: right;
+      }
+    }
+  }
+}

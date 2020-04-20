@@ -1,0 +1,63 @@
+.featured {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include responsive(lg) {
+    margin-top: 67px;
+    margin-bottom: 98px;
+  }
+
+  &__card {
+    padding: 0 7.5px;
+
+    .btn-wrapper {
+      padding: 17px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      .btn-sub-title {
+        color: #fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+    }
+
+    &:nth-child(2) {
+      .btn-wrapper {
+        @include responsive(md) {
+          top: 0;
+        }
+
+        .btn-sub-title {
+          color: $clr-gray;
+        }
+      }
+    }
+
+    .img {
+      position: relative;
+      background-color: #cccccc;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 350px;
+      width: 100%;
+      @include responsive(lg) {
+        height: 508px;
+      }
+    }
+
+    .img-1 {
+      background-image: url("../images/feature-1.png");
+    }
+
+    .img-2 {
+      background-image: url("../images/feature-2.png");
+    }
+
+    .img-3 {
+      background-image: url("../images/feature-3.png");
+    }
+  }
+}
