@@ -2,7 +2,7 @@
   // nav
   nav {
     padding: 0.95rem 0.5rem;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(12,45,113, 0.85);
     border-bottom: 1px solid rgba(255, 255, 255, .2);
     transition: background-color 200ms linear;
     @include responsive(lg) {
@@ -40,7 +40,7 @@
     }
 
     &.navbar.scrolled {
-      background-color: rgba(0, 0, 0, 0.85) !important;
+      background-color: rgba(12,45,113, 0.95) !important;
       transition: background-color 200ms linear;
     }
   }

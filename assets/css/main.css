@@ -227,7 +227,7 @@ textarea {
 
 .header nav {
   padding: 0.95rem 0.5rem;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(12, 45, 113, 0.85);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear; }
@@ -261,7 +261,7 @@ textarea {
     .header nav li a.openSearch {
       padding-right: 0 !important; }
   .header nav.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.85) !important;
+    background-color: rgba(12, 45, 113, 0.95) !important;
     -webkit-transition: background-color 200ms linear;
     transition: background-color 200ms linear; }
 
