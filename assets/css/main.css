@@ -276,6 +276,7 @@ textarea {
   top: calc(50% - 48px);
   left: 48px; }
   .header__slider .slick-dots li a {
+    cursor: pointer;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
