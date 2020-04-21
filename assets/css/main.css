@@ -731,15 +731,15 @@ textarea {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex; }
+    .footer__social-list ul li img {
+      -webkit-transition: .25s ease;
+      transition: .25s ease; }
+      .footer__social-list ul li img:hover {
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05); }
     .footer__social-list ul li:not(:last-child) {
       margin-right: 4px; }
-      .footer__social-list ul li:not(:last-child) img {
-        -webkit-transition: .25s ease;
-        transition: .25s ease; }
-        .footer__social-list ul li:not(:last-child) img:hover {
-          -webkit-transform: scale(1.05);
-              -ms-transform: scale(1.05);
-                  transform: scale(1.05); }
   .footer__copyright {
     margin-top: 28px; }
     .footer__copyright h6 {

@@ -108,14 +108,16 @@
     }
     ul {
       display: flex;
-      li:not(:last-child) {
-        margin-right: 4px;
+      li {
         img {
           transition: .25s ease;
           &:hover {
             transform: scale(1.05);
           }
         }
+      }
+      li:not(:last-child) {
+        margin-right: 4px;
       }
     }
   }
